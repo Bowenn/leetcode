@@ -13,21 +13,10 @@
  * @return {Node}
  */
 var connect = function(root) {
-    if (!root) return root;
-    
-    const bfs = (arr) => {
-        if (arr.length === 0) return;
-
-        let temp = [];
-        arr.forEach((item, index) => {
-            item.next = arr[index + 1] ? arr[index + 1] : null;
-            item.left && temp.push(item.left);
-            item.right && temp.push(item.right);
-        });
-
-        bfs(temp);
-    };
-
-    bfs([root]);
-    return root;
+    if(root == null) return root
+    if(root.left != null) root.left.next = root.right
+    if(root.right != null) root.right.next = root.next?root.next.left:null
+    connect(root.left)
+    connect(root.right)
+    return root
 };
