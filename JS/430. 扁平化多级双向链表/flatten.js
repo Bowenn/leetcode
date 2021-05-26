@@ -13,8 +13,8 @@
  * @return {Node}
  */
 
- /* 原地算法，空间占用击败100% */
-var flatten = function(head) {
+/* 原地算法，空间占用击败100% */
+const flatten = function (head) {
     if (!head) return head;
 
     let p = head;
@@ -39,7 +39,7 @@ var flatten = function(head) {
             p.next.prev = p;
             p.child = null;
         }
-        
+
         p = p.next;
     }
 

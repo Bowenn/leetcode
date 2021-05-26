@@ -7,17 +7,17 @@
  */
 
 /* My solution: BFS */
-var minDepth = function(root) {
+const minDepth = function (root) {
     // root为null单独判断直接返回
     if (!root) return 0;
 
     // bfs广度优先搜索
-    function bfsTree(nodes, deep){
-        let subNodes = [];  // 存储当前深度节点子节点的数组
+    function bfsTree (nodes, deep) {
+        const subNodes = []; // 存储当前深度节点子节点的数组
         // 遍历当前深度节点
-        for (let node of nodes) {
-            let a = node.left && subNodes.push(node.left)
-            let b = node.right && subNodes.push(node.right)
+        for (const node of nodes) {
+            const a = node.left && subNodes.push(node.left);
+            const b = node.right && subNodes.push(node.right);
             if (!a && !b) {
                 // 无子节点，返回最小深度
                 return deep;
@@ -31,9 +31,9 @@ var minDepth = function(root) {
 
 /* Another solution */
 // 直接递归，整个树的最小 => 子树的最小，很精致的思路
-var minDepth2 = function(root) {
-    if(root === null) return 0
-    if(root.left === null) return minDepth(root.right) + 1;
-    if(root.right === null) return minDepth(root.left) + 1;
+const minDepth2 = function (root) {
+    if (root === null) return 0;
+    if (root.left === null) return minDepth(root.right) + 1;
+    if (root.right === null) return minDepth(root.left) + 1;
     return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
-  }
+};

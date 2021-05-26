@@ -12,13 +12,13 @@
  * @param {Node} root
  * @return {Node}
  */
-var connect = function(root) {
+const connect = function (root) {
     if (!root) return root;
-    
+
     const bfs = (arr) => {
         if (arr.length === 0) return;
 
-        let temp = [];
+        const temp = [];
         arr.forEach((item, index) => {
             item.next = arr[index + 1] ? arr[index + 1] : null;
             item.left && temp.push(item.left);

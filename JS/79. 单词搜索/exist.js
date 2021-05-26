@@ -3,8 +3,7 @@
  * @param {string} word
  * @return {boolean}
  */
-var exist = function(board, word) {
-
+const exist = function (board, word) {
     const y = board.length;
     const x = board[0].length;
     const l = word.length;
@@ -14,12 +13,10 @@ var exist = function(board, word) {
         if (m < 0 || m >= y || n < 0 || n >= x) {
             // 走出边界
             return false;
-        }
-        else if (board[m][n] !== word[index]|| map[m][n] === 1) {
+        } else if (board[m][n] !== word[index] || map[m][n] === 1) {
             // 单词不对或之前走过的地方
             return false;
-        }
-        else {
+        } else {
             if (index === l - 1) {
                 return true;
             }
@@ -28,24 +25,23 @@ var exist = function(board, word) {
             map[m][n] = 1;
 
             // 向四个方向尝试
-            if (nextChar(m + 1, n, index + 1) 
-                || nextChar(m - 1, n, index + 1)
-                || nextChar(m, n + 1, index + 1)
-                || nextChar(m, n - 1, index + 1)
+            if (nextChar(m + 1, n, index + 1) ||
+                nextChar(m - 1, n, index + 1) ||
+                nextChar(m, n + 1, index + 1) ||
+                nextChar(m, n - 1, index + 1)
             ) {
                 return true;
-            }
-            else {
+            } else {
                 // 回退
                 map[m][n] = 0;
                 return false;
             }
         }
-    }
+    };
 
     for (let i = 0; i < y; i++) {
         for (let j = 0; j < x; j++) {
-            if (nextChar(i, j, 0)){
+            if (nextChar(i, j, 0)) {
                 return true;
             }
         }

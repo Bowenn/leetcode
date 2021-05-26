@@ -2,9 +2,9 @@
  * @param {character[][]} grid
  * @return {number}
  */
-var numIslands = function(grid) {
-    const max_i = grid.length, max_j = grid[0].length;
-    let stoneSet = new Set();
+const numIslands = function (grid) {
+    const max_i = grid.length; const max_j = grid[0].length;
+    const stoneSet = new Set();
     let count = 0;
 
     const stonePerimeter = (i, j) => {
@@ -23,8 +23,7 @@ var numIslands = function(grid) {
         if (j + 1 < max_j && grid[i][j + 1] === '1') {
             stonePerimeter(i, j + 1);
         }
-        return;
-    }
+    };
 
     for (let i = 0; i < max_i; i++) {
         for (let j = 0; j < max_j; j++) {

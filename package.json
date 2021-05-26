@@ -1,0 +1,30 @@
+{
+  "name": "leetcode",
+  "version": "0.0.0",
+  "description": "> My solution and some ideas",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore",
+    "lint:fix": "./node_modules/.bin/eslint --fix . --ignore-path .gitignore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bowenn/leetcode.git"
+  },
+  "author": "Bowen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bowenn/leetcode/issues"
+  },
+  "homepage": "https://github.com/Bowenn/leetcode#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}

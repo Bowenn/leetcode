@@ -2,9 +2,9 @@
  * @param {number[][]} grid
  * @return {number}
  */
-var maxAreaOfIsland = function(grid) {
-    const max_i = grid.length, max_j = grid[0].length;
-    let stoneSet = new Set();
+const maxAreaOfIsland = function (grid) {
+    const max_i = grid.length; const max_j = grid[0].length;
+    const stoneSet = new Set();
     let max = 0;
 
     const stonePerimeter = (i, j) => {
@@ -25,12 +25,12 @@ var maxAreaOfIsland = function(grid) {
             res += stonePerimeter(i, j + 1);
         }
         return res;
-    }
+    };
 
     for (let i = 0; i < max_i; i++) {
         for (let j = 0; j < max_j; j++) {
             if (grid[i][j] === 1) {
-                let t = stonePerimeter(i, j);
+                const t = stonePerimeter(i, j);
                 if (t > max) max = t;
             }
         }

@@ -9,17 +9,16 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var sumNumbers = function(root) {
+const sumNumbers = function (root) {
     if (!root) return 0;
 
     let total = 0;
     const dfs = (node, cur) => {
-        let t = cur * 10 + node.val;
+        const t = cur * 10 + node.val;
         if (!(node.left || node.right)) {
             // 叶子结点
             total += t;
-        }
-        else {
+        } else {
             node.left && dfs(node.left, t);
             node.right && dfs(node.right, t);
         }

@@ -9,14 +9,14 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var rightSideView = function(root) {
+const rightSideView = function (root) {
     if (!root) return [];
-    let res = [];
-    
+    const res = [];
+
     const bfs = (arr) => {
         if (arr.length === 0) return;
 
-        let temp = [];
+        const temp = [];
         arr.forEach((item, index) => {
             item.left && temp.push(item.left);
             item.right && temp.push(item.right);

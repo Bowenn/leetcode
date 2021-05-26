@@ -9,15 +9,15 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var bstToGst = function(root) {
+const bstToGst = function (root) {
     let sum = 0;
-    function myFun(root){
-        if(root.right != null) myFun(root.right);
-        sum += root.val
+    function myFun (root) {
+        if (root.right != null) myFun(root.right);
+        sum += root.val;
         root.val = sum;
-        if(root.left != null) myFun(root.left);
+        if (root.left != null) myFun(root.left);
     }
     myFun(root);
-    
+
     return root;
 };

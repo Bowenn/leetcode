@@ -12,11 +12,11 @@
  * @param {Node} root
  * @return {Node}
  */
-var connect = function(root) {
-    if(root == null) return root
-    if(root.left != null) root.left.next = root.right
-    if(root.right != null) root.right.next = root.next?root.next.left:null
-    connect(root.left)
-    connect(root.right)
-    return root
+var connect = function (root) {
+    if (root == null) return root;
+    if (root.left != null) root.left.next = root.right;
+    if (root.right != null) root.right.next = root.next ? root.next.left : null;
+    connect(root.left);
+    connect(root.right);
+    return root;
 };

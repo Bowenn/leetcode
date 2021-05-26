@@ -3,24 +3,21 @@
  * @param {number} target
  * @return {number[][]}
  */
-var combinationSum = function(candidates, target) {
-    let res = [];
+const combinationSum = function (candidates, target) {
+    const res = [];
     candidates.sort((a, b) => a - b);
 
-    let addANum = (cur_arr, cur_sum, base) => {
+    const addANum = (cur_arr, cur_sum, base) => {
         for (let i = base; i < candidates.length; i++) {
             if (cur_sum + candidates[i] < target) {
                 addANum(cur_arr.concat(candidates[i]), cur_sum + candidates[i], i);
-            }
-            else if (cur_sum + candidates[i] === target) {
+            } else if (cur_sum + candidates[i] === target) {
                 res.push(cur_arr.concat(candidates[i]));
-            }
-            else {
+            } else {
                 return;
             }
         }
-        return;
-    }
+    };
 
     addANum([], 0, 0);
 

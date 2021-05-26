@@ -10,10 +10,10 @@
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
  */
-var flatten = function(root) {
+const flatten = function (root) {
     let p = root;
     let p_to = null;
-    while(p) {
+    while (p) {
         // 判断是否需要迁移右分杈
         if (p.right && p.left) {
             // 找到分杈接入的目标
@@ -26,12 +26,11 @@ var flatten = function(root) {
             p.right = null;
         }
 
-        if (p.left){
+        if (p.left) {
             // 左分杈移到右分杈上
             p.right = p.left;
             p.left = null;
         }
         p = p.right;
     }
-    return;
 };

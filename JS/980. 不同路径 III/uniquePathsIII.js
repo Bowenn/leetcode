@@ -2,7 +2,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-var uniquePathsIII = function(grid) {
+const uniquePathsIII = function (grid) {
     const y = grid.length;
     const x = grid[0].length;
     let wayCount = 0;
@@ -11,22 +11,18 @@ var uniquePathsIII = function(grid) {
     const goOneStep = (m, n) => {
         if (m < 0 || m >= y || n < 0 || n >= x) {
             // 走出边界
-            return;
-        }
-        else if (grid[m][n] === -1 || map[m][n] === 1) {
+
+        } else if (grid[m][n] === -1 || map[m][n] === 1) {
             // 走到障碍物或之前走过的地方
-            return;
-        }
-        else if (grid[m][n] === 2) {
+
+        } else if (grid[m][n] === 2) {
             // 走到终点，查看方格是否全部走完
             map[m][n] = 1; // 标记当前已经走过
             if (checkMap()) {
                 wayCount++;
             }
             map[m][n] = 0; // 回退
-            return;
-        }
-        else {
+        } else {
             // 可以继续走
             map[m][n] = 1; // 标记已经走过
 
@@ -38,9 +34,8 @@ var uniquePathsIII = function(grid) {
 
             // 回退
             map[m][n] = 0;
-            return;
         }
-    }
+    };
 
     const checkMap = () => {
         for (let i = 0; i < y; i++) {
@@ -52,11 +47,11 @@ var uniquePathsIII = function(grid) {
             }
         }
         return true;
-    }
+    };
 
     let startM, startN;
     // 找到起点
-    findO:{
+    findO: {
         for (let i = 0; i < y; i++) {
             for (let j = 0; j < x; j++) {
                 if (grid[i][j] === 1) {
@@ -67,6 +62,6 @@ var uniquePathsIII = function(grid) {
         }
     }
     goOneStep(startM, startN);
-    
+
     return wayCount;
 };
