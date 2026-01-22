@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+#include <unordered_set>
 #include <string_view>
 
 using namespace std;
@@ -17,6 +18,18 @@ int main() {
 
     for (const string& w: words) {
         m[string_view(w)]++;
+    }
+
+    unordered_set<int> s;
+    s.insert(1);
+    s.insert(2);
+    s.insert(2);
+    s.insert(3);
+    s.insert(3);
+    s.insert(4);
+    for (int n: s) {
+        s.erase(n + 1);
+        std::cout << n << std::endl;
     }
     
     return 0;
