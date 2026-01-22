@@ -41,8 +41,8 @@ public:
 
 int main(){
     // vector<int> nums = {-2,1,2,-1,-1,-2,-2,-1,-1,1,1};
-    vector<int> complexity = {100, 200, 150, 300, 1000, 80, 200};
-    int res = (new Solution())->countPermutations(complexity);
+    int n = 88;
+    int res = (new Solution())->clumsy(n);
 
     cout << res << endl;
 
