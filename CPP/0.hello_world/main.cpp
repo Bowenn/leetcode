@@ -31,6 +31,9 @@ int main() {
         s.erase(n + 1);
         std::cout << n << std::endl;
     }
+
+    unordered_map<int, unordered_map<int, long long>> mathResult;
+    mathResult[1][2] = 11222;
     
     return 0;
 }
