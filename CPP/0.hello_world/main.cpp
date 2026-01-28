@@ -34,6 +34,8 @@ int main() {
 
     unordered_map<int, unordered_map<int, long long>> mathResult;
     mathResult[1][2] = 11222;
-    
+    int minD = INT_MAX;
+    bool test = minD == INT_MAX;
+
     return 0;
 }
