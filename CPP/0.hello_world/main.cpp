@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <string_view>
+#include <algorithm>
 
 using namespace std;
 
@@ -36,6 +37,12 @@ int main() {
     mathResult[1][2] = 11222;
     int minD = INT_MAX;
     bool test = minD == INT_MAX;
+
+    vector<int> toFind = {10, 11, 12, 13, 14, 15, 16, 17};
+    auto b = toFind.begin();
+    auto e = toFind.end();
+    auto findRes = find(toFind.begin(), toFind.end(), 18);
+    toFind.insert(toFind.begin() + 8, 99);
 
     return 0;
 }
