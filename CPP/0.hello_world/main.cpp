@@ -44,5 +44,13 @@ int main() {
     auto findRes = find(toFind.begin(), toFind.end(), 18);
     toFind.insert(toFind.begin() + 8, 99);
 
+    // io optimization
+    static const int fast_io = []() {
+        std::ios_base::sync_with_stdio(false);
+        std::cin.tie(NULL);
+        std::cout.tie(NULL);
+        return 0;
+    }();
+
     return 0;
 }
