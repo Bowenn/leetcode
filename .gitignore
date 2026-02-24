@@ -15,4 +15,5 @@ node_modules/
 
 # build assets
 .swan/
-./package-lock.json
+CPP/**/.output/
+NeetCode/**/.output/
