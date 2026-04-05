@@ -33,6 +33,7 @@ module.exports = {
         ],
         'no-unused-vars': ['off'],
         camelcase: ['off'],
-        'no-labels': ['off']
+        'no-labels': ['off'],
+        'space-before-function-paren': ['off']
     }
 };
