@@ -34,6 +34,8 @@ module.exports = {
         'no-unused-vars': ['off'],
         camelcase: ['off'],
         'no-labels': ['off'],
-        'space-before-function-paren': ['off']
+        'space-before-function-paren': ['off'],
+        'one-var': ['off'],
+        'brace-style': ['off']
     }
 };
