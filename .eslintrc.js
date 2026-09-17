@@ -37,6 +37,7 @@ module.exports = {
         'space-before-function-paren': ['off'],
         'one-var': ['off'],
         'brace-style': ['off'],
-        'operator-linebreak': ['off']
+        'operator-linebreak': ['off'],
+        'no-useless-constructor': ['off']
     }
 };
