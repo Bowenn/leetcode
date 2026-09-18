@@ -11,7 +11,7 @@ const numMatchingSubseq = function(s, words) {
         let p = -1;
         for (let i = 0; i < sub.length; i++) {
             p = main.indexOf(sub[i], p + 1);
-            if (p < 0) return false
+            if (p < 0) return false;
         }
         return true;
     };
@@ -21,7 +21,7 @@ const numMatchingSubseq = function(s, words) {
 
 /* 字符串转换为[char, count]后再扫一遍整个字符串，如果要搜索的字符串有很多重复的话性能相比应该会显得更好 788ms */
 const numMatchingSubseq0 = function(s, words) {
-    const sSplited = []
+    const sSplited = [];
     s.split('').reduce((pre, cur) => {
         if (pre[0] === cur) {
             pre[1]++;
@@ -50,7 +50,7 @@ const numMatchingSubseq0 = function(s, words) {
         return wSplited;
     });
 
-    let flag = true
+    let flag = true;
     for (let i = 0; i < sSplited.length && flag; i++) {
         flag = false;
         wordsSplited.forEach(word => {

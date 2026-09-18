@@ -10,5 +10,5 @@ const myAtoi = function(s) {
     const num = +(signS + (+numS));
     return num <= MIN ? MIN
         : num <= MAX ? num
-        : MAX;
+            : MAX;
 };

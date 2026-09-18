@@ -5,7 +5,8 @@
 
 /* 左右互搏（x） */
 const maxArea = function(height) {
-    let p = 0; q = height.length - 1;
+    let p = 0;
+    let q = height.length - 1;
     let hL = height[p], hR = height[q];
     let max = (q - p) * Math.min(hL, hR);
     while(p < q) {
@@ -35,12 +36,12 @@ const maxArea1 = function(height) {
     const heightEnd = [[height.length - 1, height[height.length - 1]]]; // 可以作为右边
     for (let i = 1; i < height.length - 1; i++) {
         if (height[i] > heightStart[0][1]) {
-            heightStart.unshift([i, height[i]])
+            heightStart.unshift([i, height[i]]);
         }
     }
     for (let i = height.length - 2; i > 0; i--) {
         if (height[i] > heightEnd[0][1]) {
-            heightEnd.unshift([i, height[i]])
+            heightEnd.unshift([i, height[i]]);
         }
     }
     
@@ -51,7 +52,7 @@ const maxArea1 = function(height) {
                 max = Math.max(
                     max,
                     Math.min(heightStart[i][1], heightEnd[j][1]) * (heightEnd[j][0] - heightStart[i][0])
-                )
+                );
             }
         }
     }
