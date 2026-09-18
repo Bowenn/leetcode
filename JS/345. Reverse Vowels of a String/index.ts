@@ -1,4 +1,4 @@
-/* eslint-disable quote-props */
+ 
 function reverseVowels(s: string): string {
     const sArr = s.split('');
     const toReverse: Array<[string, number]> = [];

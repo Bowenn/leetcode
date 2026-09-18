@@ -1,7 +1,7 @@
 export {};
 
 class MyMinHeap {
-    size: number
+    size: number;
     treeArray: number[];
 
     constructor(size: number) {
@@ -23,7 +23,7 @@ class MyMinHeap {
         }
 
         if (smallest === index) {
-            // eslint-disable-next-line no-useless-return
+             
             return;
         }
         else {

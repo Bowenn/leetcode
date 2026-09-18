@@ -4,8 +4,8 @@
   "description": "> My solution and some ideas",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint . --ignore-path .gitignore",
-    "lint:fix": "./node_modules/.bin/eslint --fix . --ignore-path .gitignore",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "./node_modules/.bin/eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,12 +19,14 @@
   },
   "homepage": "https://github.com/Bowenn/leetcode#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "eslint": "^7.27.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.3",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.1",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.10.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "globals": "^17.12.0",
+    "jiti": "^2.7.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.70.0"
   }
 }

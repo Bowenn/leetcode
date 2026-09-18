@@ -42,7 +42,7 @@ class MyMinHeap {
         }
 
         if (smallest === index) {
-            // eslint-disable-next-line no-useless-return
+             
             return;
         }
         else {

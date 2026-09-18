@@ -24,7 +24,7 @@ class MyMinHeap {
         }
 
         if (smallest === index) {
-            // eslint-disable-next-line no-useless-return
+             
             return;
         }
         else {
@@ -117,7 +117,7 @@ function totalCost(costs: number[], k: number, candidates: number): number {
 // my own solution, use heap until left and right meet, then sort the remaining heap and pick k smallest
 // quicker than the above solution, but worse time complexity. And still slower than use 2 heaps to maintain the left and right candidates.
 class MyMinHeap2 {
-    size: number
+    size: number;
     treeArray: Array<[number, boolean]>; // [[value, fromLeft]...]
 
     constructor(size: number) {
@@ -139,7 +139,7 @@ class MyMinHeap2 {
         }
 
         if (smallest === index) {
-            // eslint-disable-next-line no-useless-return
+             
             return;
         }
         else {

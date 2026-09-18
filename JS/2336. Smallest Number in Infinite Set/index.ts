@@ -1,5 +1,5 @@
 class SmallestInfiniteSet {
-    numbersRemain: Array<[number, number]> = [[Infinity, 1]]
+    numbersRemain: Array<[number, number]> = [[Infinity, 1]];
     spaceLimit = 4;
     constructor() {
     }

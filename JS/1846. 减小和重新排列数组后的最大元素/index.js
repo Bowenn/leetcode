@@ -9,7 +9,7 @@ const maximumElementAfterDecrementingAndRearranging = function(arr) {
             return max + 1;
         }
         else {
-            return max
+            return max;
         }
     }, 0);
 };

@@ -1,4 +1,4 @@
-/* eslint-disable quote-props */
+ 
 const digMap: Record<string, string[]> = {
     '2': ['a', 'b', 'c'],
     '3': ['d', 'e', 'f'],

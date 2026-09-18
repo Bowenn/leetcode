@@ -1,7 +1,7 @@
 class RecentCounter {
     requestedQueue: number[] = [];
 
-    // eslint-disable-next-line no-useless-constructor
+     
     constructor() {
     }
 
