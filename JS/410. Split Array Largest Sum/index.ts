@@ -8,7 +8,7 @@ function splitArray(nums: number[], k: number): number {
         res.push((res[res.length - 1] ?? 0) + cur);
         return res;
     }, [0]);
-    const numSumsMap = Array.from({ length: n }, () => Array(n).fill(0))
+    const numSumsMap = Array.from({ length: n }, () => Array(n).fill(0));
     for (let i = 0; i < n; i++) {
         for (let j = i; j < n; j++) {
             numSumsMap[i][j] = numSums[j + 1] - numSums[i];
